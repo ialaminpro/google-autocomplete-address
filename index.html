@@ -88,7 +88,9 @@
                         document.getElementById('country').value = country;
                         document.getElementById('state').value = state;
                         document.getElementById('city').value = city;
-                        document.getElementById('postal_code').value = pin;
+                        if(Number.isInteger(parseInt(pin))) {
+                            document.getElementById('postal_code').value = pin;
+                        }
                     }
                 }
             });
